@@ -1,0 +1,45 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: esporte-api
+    restart: unless-stopped
+    env_file: .env
+    expose: ["4000"]
+    networks:
+      - esporte
+      - arcadedb
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:4000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: /api
+    container_name: ddtech-esporte
+    restart: unless-stopped
+    environment:
+      API_INTERNAL_URL: http://api:4000
+    expose: ["3000"]
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      esporte: {}
+      edge:
+        aliases: ["esporte"]
+
+networks:
+  esporte:
+  edge:
+    external: true
+    name: ddtech-edge
+  arcadedb:
+    external: true
+    name: arcadedb-qn3r_default

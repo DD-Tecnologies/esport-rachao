@@ -1,0 +1,1 @@
+{"name":"esporte-rachao","private":true,"workspaces":["apps/*","packages/*"],"scripts":{"dev":"npm run dev -w @esporte/api & npm run dev -w @esporte/web","build":"npm run build -w @esporte/api && npm run build -w @esporte/web","test":"npm run test -w @esporte/api"},"engines":{"node":">=20"}}
