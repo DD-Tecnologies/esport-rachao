@@ -14,6 +14,7 @@ Data: 16/10/2026
 - Quadra permite troca por toque: selecione dois jogadores do mesmo time.
 - A posição é única em todos os breakpoints: web exibe `1-2-3` na primeira linha e `4-5-6` na segunda; mobile preenche por coluna como `1-2-3 | 4-5-6`, com a rede vertical à esquerda.
 - Placar possui botões de ponto maiores, cabeçalho compacto, orientação horizontal e pedido de bloqueio de tela quando o navegador permitir.
+- Em retrato, os dois times do placar permanecem lado a lado; as escalações são compactadas e o elenco de cada time usa rolagem interna curta, evitando uma página longa.
 - Fluxo conectado: sorteio → quadra → placar → quadra, preservando a ordem salva na escalação.
 - Campos numéricos usam `inputMode` adequado para abrir o teclado numérico no celular.
 

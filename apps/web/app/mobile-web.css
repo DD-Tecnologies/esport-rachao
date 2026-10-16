@@ -23,12 +23,12 @@
   .score-config{grid-template-columns:1fr 1fr}.score-config .draw-source,.score-config .score-start{grid-column:1/-1}.score-config input,.score-config select{min-height:46px}
   .score-head{position:sticky;top:0;z-index:4;background:#07111fee;padding:10px 0;margin-top:-10px;backdrop-filter:blur(10px)}
   .score-head h1{font-size:36px}.score-head .eyebrow{margin-bottom:4px!important}.score-head p:last-child{font-size:11px}.score-head .button-row{gap:6px}
-  .live-score{gap:12px}.score-team{padding:18px 12px}.score-team>h2{font-size:26px}.score-team>strong{font-size:86px;margin:5px}.score-team>.point-button{width:100%;min-height:58px;font-size:18px;touch-action:manipulation}
-  .court{margin:18px 0 14px}.court button{min-height:76px;touch-action:manipulation}.roster{justify-content:center}.roster label{min-height:34px}.set-strip{overflow-x:auto;padding-bottom:5px}.set-strip span{white-space:nowrap}
+  .live-score{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:start}.score-team{min-width:0;padding:12px 7px}.score-team>small{font-size:7px;letter-spacing:.5px}.score-team>h2{margin:4px 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:19px}.score-team>strong{font-size:64px;margin:2px}.score-team>.point-button{width:100%;min-height:48px;padding:8px 3px;font-size:12px;touch-action:manipulation}
+  .court{margin:10px 0 8px;padding:6px;gap:3px;border-width:2px}.court button{min-height:48px;border-radius:10px;touch-action:manipulation}.court button span{display:none}.court button b{font-size:13px}.court button i{font-size:7px}.roster{display:grid;grid-template-columns:1fr;max-height:86px;overflow-y:auto;overscroll-behavior:contain;justify-content:stretch;padding-right:2px}.roster label{min-height:26px;padding:4px 5px;justify-content:flex-start;font-size:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.roster label svg{width:11px;height:11px;flex:none}.set-strip{overflow-x:auto;padding-bottom:5px}.set-strip span{white-space:nowrap}
 }
 @media(max-width:520px){
   .shell main{padding-left:12px;padding-right:12px}.draw-page-head h1{font-size:40px}.draw-top-actions{left:8px;right:8px}.draw-top-actions a,.draw-top-actions button{padding:10px 7px;font-size:10px}
   .draw-settings{grid-template-columns:1fr}.available-list article{gap:8px}.available-list article>button{min-height:40px}
-  .score-config{grid-template-columns:1fr}.score-config .draw-source,.score-config .score-start{grid-column:auto}.score-team>strong{font-size:78px}
+  .score-config{grid-template-columns:1fr}.score-config .draw-source,.score-config .score-start{grid-column:auto}.score-team{padding:10px 5px}.score-team>h2{font-size:16px}.score-team>strong{font-size:58px}.score-team>.point-button{min-height:46px;font-size:11px}.court button{min-height:43px}
 }
 @media(orientation:landscape) and (max-height:520px){.shell main{padding-top:18px}.score-head{position:static}.live-score{grid-template-columns:1fr 1fr}.score-team>strong{font-size:60px}.court{grid-template-columns:repeat(3,1fr);margin:10px 0}.court button{min-height:55px}}

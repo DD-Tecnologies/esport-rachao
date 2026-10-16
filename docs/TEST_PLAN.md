@@ -85,7 +85,7 @@ Execute cada cenário em orientação vertical e, para placar, também horizonta
 | Card do jogador | [ ] | [ ] | [ ] | Radar legível; edição numérica usável com teclado numérico |
 | Sorteio | [ ] | [ ] | [ ] | Abas Disponíveis/Lista funcionam; ações não ficam sob a navegação |
 | Quadra | [ ] | [ ] | [ ] | Ordem móvel `1-2-3 \| 4-5-6`; rede vertical à esquerda; toque em dois jogadores troca posições |
-| Placar | [ ] | [ ] | [ ] | Botões de ponto têm área mínima de 44 px e placar permanece legível |
+| Placar | [ ] | [ ] | [ ] | Times A/B lado a lado; botão de ponto mínimo de 44 px; elenco compacto sem rolagem longa da página |
 | Administração | [ ] | [ ] | [ ] | Busca, permissões e ações não estouram a tela |
 
 ## Regressão antes de cada deploy
