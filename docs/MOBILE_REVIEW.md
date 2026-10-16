@@ -12,6 +12,7 @@ Data: 16/10/2026
 - Botões de sortear e visualizar a quadra permanecem acessíveis acima da navegação inferior.
 - Cards de jogadores utilizam imagens com carregamento preguiçoso nas listas.
 - Quadra permite troca por toque: selecione dois jogadores do mesmo time.
+- Em telas de até 650 px, a quadra usa duas colunas por três linhas e a rede fica vertical na lateral direita, espelhando a orientação lateral do layout web.
 - Placar possui botões de ponto maiores, cabeçalho compacto, orientação horizontal e pedido de bloqueio de tela quando o navegador permitir.
 - Fluxo conectado: sorteio → quadra → placar → quadra, preservando a ordem salva na escalação.
 - Campos numéricos usam `inputMode` adequado para abrir o teclado numérico no celular.
