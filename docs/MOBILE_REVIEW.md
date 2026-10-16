@@ -6,7 +6,8 @@ Data: 16/10/2026
 
 - Navegação inferior fixa, com área segura de iPhone/Android e rolagem horizontal quando houver itens administrativos.
 - Sorteio em abas no celular: **Disponíveis** e **Lista do jogo**.
-- Ao adicionar um jogador no celular, a lista do jogo é aberta automaticamente.
+- Ao adicionar um jogador no celular, a tela permanece em **Disponíveis**, permitindo incluir vários atletas sem troca automática de aba.
+- Ao concluir o sorteio, um diálogo pergunta se o usuário deseja abrir a quadra; a resposta negativa mantém o resultado salvo e o usuário no sorteio.
 - Listas longas possuem rolagem interna para preservar o tamanho da tela.
 - Botões de sortear e visualizar a quadra permanecem acessíveis acima da navegação inferior.
 - Cards de jogadores utilizam imagens com carregamento preguiçoso nas listas.

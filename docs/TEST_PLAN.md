@@ -14,7 +14,7 @@ Este documento registra o escopo de validação do projeto após as melhorias de
 
 | Nível | Objetivo | Estado atual | Comando/ferramenta |
 | --- | --- | --- | --- |
-| Unitário | Regras puras e segurança | Implementado para hash de senha | `npm test` |
+| Unitário | Regras puras, seleção do sorteio e segurança | Implementado | `npm test` |
 | Build e tipos | Compilação de API e Next.js | Implementado | `npm run build --workspace=@esporte/api` e `npm run build --workspace=@esporte/web` |
 | Integração | API + ArcadeDB + permissões | Checklist manual até existir suíte HTTP | Ver cenários abaixo |
 | E2E visual | Fluxos completos em navegadores e celulares | Checklist manual | Chrome/Edge e dispositivos reais |
@@ -54,11 +54,14 @@ Este documento registra o escopo de validação do projeto após as melhorias de
 
 ### Sorteio, quadra e placar
 
-- [ ] Adicionar jogador move o card para a lista do jogo.
+- [ ] No mobile, adicionar jogador mantém a aba **Disponíveis** ativa e atualiza o contador da lista.
 - [ ] Remover jogador devolve-o à lista disponível.
 - [ ] A lista informa quantos jogadores faltam para o sorteio.
 - [ ] Sorteio exige quantidade mínima configurada.
 - [ ] Sorteio gera times e grava o histórico.
+- [ ] Após sortear, o diálogo pergunta se o usuário quer abrir a quadra.
+- [ ] Ao responder “não”, o resultado permanece salvo e o usuário continua na tela de sorteio.
+- [ ] Ao responder “sim”, o usuário é levado à quadra com os times recém-sorteados.
 - [ ] A quadra recebe os times do último sorteio.
 - [ ] Troca por clique em dois jogadores do mesmo time funciona.
 - [ ] Arrastar e soltar funciona em desktop.
