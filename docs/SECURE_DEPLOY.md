@@ -2,7 +2,7 @@
 
 O workflow [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml) valida o projeto em todo push para `main` e só então atualiza o checkout existente no VPS. Ele não envia o arquivo `.env`, senhas do ArcadeDB, JWT ou a senha master para o GitHub Actions.
 
-Se os Secrets de deploy ainda não existirem, o job **Deploy to VPS** é ignorado de forma intencional; o job de validação continua verde e não há tentativa de conexão nem erro por credenciais ausentes. Enquanto isso, o deploy manual seguro pode continuar sendo usado.
+Por padrão, o job **Deploy to VPS** é ignorado de forma intencional: o job de validação continua verde e não há tentativa de conexão nem erro por credenciais ausentes. Depois de cadastrar todos os Secrets, defina a variável não secreta `DEPLOY_ENABLED` como `true` no ambiente GitHub **production** para ativar o deploy automático. Enquanto isso, o deploy manual seguro pode continuar sendo usado.
 
 ## Fluxo
 
@@ -24,6 +24,12 @@ Cadastre-os no ambiente GitHub **production**, não como variáveis comuns do re
 | `DEPLOY_PATH` | Checkout já existente no VPS | `/opt/esporte` |
 | `DEPLOY_SSH_KEY` | Chave privada exclusiva do deploy | conteúdo PEM/OpenSSH completo |
 | `VPS_KNOWN_HOSTS` | Chave pública do host SSH | linha completa de `known_hosts` |
+
+Defina também a variável do ambiente `production`:
+
+| Variável | Valor |
+| --- | --- |
+| `DEPLOY_ENABLED` | `true` somente após cadastrar e conferir todos os Secrets |
 
 Não cadastre `ARCADE_PASSWORD`, `JWT_SECRET`, `MASTER_PASSWORD` ou o `.env` como Secrets do GitHub para este fluxo: eles não são necessários ao pipeline e devem permanecer apenas no VPS.
 
