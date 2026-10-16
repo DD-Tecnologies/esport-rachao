@@ -2,6 +2,8 @@
 
 O workflow [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml) valida o projeto em todo push para `main` e só então atualiza o checkout existente no VPS. Ele não envia o arquivo `.env`, senhas do ArcadeDB, JWT ou a senha master para o GitHub Actions.
 
+Se os Secrets de deploy ainda não existirem, o job **Deploy to VPS** é ignorado de forma intencional; o job de validação continua verde e não há tentativa de conexão nem erro por credenciais ausentes. Enquanto isso, o deploy manual seguro pode continuar sendo usado.
+
 ## Fluxo
 
 1. O GitHub Actions instala as dependências travadas pelo `package-lock.json`.

@@ -46,6 +46,12 @@ jobs:
   deploy:
     name: Deploy to VPS
     needs: verify
+    # A repository without deployment secrets still gets a green validation
+    # run. The deploy is skipped rather than failing or exposing credentials.
+    if: >-
+      ${{ secrets.DEPLOY_HOST != '' && secrets.DEPLOY_PORT != '' &&
+          secrets.DEPLOY_USER != '' && secrets.DEPLOY_PATH != '' &&
+          secrets.DEPLOY_SSH_KEY != '' && secrets.VPS_KNOWN_HOSTS != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     environment: production
