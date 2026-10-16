@@ -84,7 +84,7 @@ Execute cada cenário em orientação vertical e, para placar, também horizonta
 | Jogadores | [ ] | [ ] | [ ] | Grade em uma coluna, cards e modal sem rolagem horizontal |
 | Card do jogador | [ ] | [ ] | [ ] | Radar legível; edição numérica usável com teclado numérico |
 | Sorteio | [ ] | [ ] | [ ] | Abas Disponíveis/Lista funcionam; ações não ficam sob a navegação |
-| Quadra | [ ] | [ ] | [ ] | Duas colunas por três linhas; rede vertical à direita; toque em dois jogadores troca posições |
+| Quadra | [ ] | [ ] | [ ] | Ordem móvel `1-2-3 \| 4-5-6`; rede vertical à direita; toque em dois jogadores troca posições |
 | Placar | [ ] | [ ] | [ ] | Botões de ponto têm área mínima de 44 px e placar permanece legível |
 | Administração | [ ] | [ ] | [ ] | Busca, permissões e ações não estouram a tela |
 
