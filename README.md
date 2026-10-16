@@ -20,5 +20,6 @@ No primeiro início, a API cria o schema e garante a conta master definida no am
 
 - Plano completo de testes e regressão: [docs/TEST_PLAN.md](docs/TEST_PLAN.md).
 - Revisão e critérios da experiência mobile: [docs/MOBILE_REVIEW.md](docs/MOBILE_REVIEW.md).
+- Configuração segura de CI/CD: [docs/SECURE_DEPLOY.md](docs/SECURE_DEPLOY.md).
 - Teste automatizado atual: `npm test`.
 - Builds de validação: `npm run build --workspace=@esporte/api` e `npm run build --workspace=@esporte/web`.
